@@ -18,7 +18,7 @@ def sem_acesso(tag_id):
     global nao_autorizados
     clear_console()
     nome = tags_cadastradas[tag_id]
-    print(f"\nVocê não tem acesso a este projeto, {nome}")
+    print(f"Você não tem acesso a este projeto, {nome}")
     time.sleep(2)
 
     nao_autorizados[tag_id] = nao_autorizados.get(tag_id, 0) + 1
@@ -31,7 +31,7 @@ def sem_acesso(tag_id):
 def sem_identificacao(tag_id):
     global invasoes
     clear_console()
-    print("\nIdentificação não encontrada!")
+    print("Identificação não encontrada!")
     time.sleep(2)
 
     invasoes += 1
@@ -72,6 +72,7 @@ try:
                 "dentro": False
             }
 
+        clear_console()
         if not entraram[tag_id]["dentro"]:
             # ENTRANDO
             print(f"Bem-vindo, {nome}\n")
